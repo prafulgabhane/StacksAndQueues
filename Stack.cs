@@ -16,21 +16,7 @@ namespace StackQueueUsingLinkedList
             this.head = null;
             this.tail = null;
             this.count = 0;
-        
         }
-
-        //public int size()
-        //{
-        //    return this.count;
-        //}
-
-        //public bool isEmpty()
-        //{
-        //    return this.count == 0;
-        //}
-
-
-
         public void enqueue(int value) //Add new node in Queue.
         {
             NewNode node = new NewNode(value); //Create new Node.
@@ -45,8 +31,9 @@ namespace StackQueueUsingLinkedList
             Console.WriteLine("The Data is : " + node.data);
             this.count++;
             this.tail= node;
+
             Console.WriteLine("Item pushed into stack -> " + data);
-        }
+            }
 
         public int dequeue() //Delete element from Queue
         {
@@ -61,7 +48,7 @@ namespace StackQueueUsingLinkedList
             this.count--;
             if(head==null)
             {
-                tail = null; //when deleting the last node of linked list.
+                tail = null; // case when deleting the last node of linked list.
             }
 
             return temp.data;
