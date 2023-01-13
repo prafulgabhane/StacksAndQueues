@@ -22,7 +22,8 @@ namespace StackQueueUsingLinkedList
                 head = node;
                 node.next = temp;
             }
-            Console.WriteLine("Item pushed into stack = " + data);
+            Console.WriteLine("Item pushed into stack -> " + data);
+
         }
 
         public int pop()
