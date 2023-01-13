@@ -6,39 +6,64 @@ using System.Threading.Tasks;
 
 namespace StackQueueUsingLinkedList
 {
-    public class Stack
+    public class Queue
     {
-        NewNode head;
-        public void push(int data)
+        public NewNode head;
+        public NewNode tail;
+        public int count;
+        public Queue() 
         {
-            NewNode node = new NewNode(data);
-            if (head == null)
-            {
-                head = node;
-            }
-            else
-            {
-                NewNode temp = head;
-                head = node;
-                node.next = temp;
-            }
-            Console.WriteLine("Item pushed into stack = " + data);
+            this.head = null;
+            this.tail = null;
+            this.count = 0;
+        
         }
 
-        public int pop()
+        //public int size()
+        //{
+        //    return this.count;
+        //}
+
+        //public bool isEmpty()
+        //{
+        //    return this.count == 0;
+        //}
+
+
+
+        public void enqueue(int value) //Add new node in Queue.
         {
-            int popped;
+            NewNode node = new NewNode(value); //Create new Node.
             if (head == null)
             {
-                Console.WriteLine("Stack is Empty");
-                return 0;
+                head = node; //Add 1st element in Queue.
             }
             else
             {
-                popped = head.data;
-                head = head.next;
-                return popped;
+               tail.next= node;
             }
+            Console.WriteLine("The Data is : " + node.data);
+            this.count++;
+            this.tail= node;
+        }
+
+        public int dequeue() //Delete element from Queue
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Queue is Empty");
+                return 0;
+            }
+            
+            var temp = head; 
+            head= head.next;
+            this.count--;
+            if(head==null)
+            {
+                tail = null; //when deleting the last node of linked list.
+            }
+
+            return temp.data;
         }
 
         public int peek()
