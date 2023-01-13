@@ -45,6 +45,7 @@ namespace StackQueueUsingLinkedList
             Console.WriteLine("The Data is : " + node.data);
             this.count++;
             this.tail= node;
+            Console.WriteLine("Item pushed into stack -> " + data);
         }
 
         public int dequeue() //Delete element from Queue
