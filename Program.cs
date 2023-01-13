@@ -6,7 +6,7 @@ namespace StackQueueUsingLinkedList
     {   
         public static void Main(string[] args)
         {
-            Console.WriteLine("***** Welocome to Stack & Queue Programs Using Linked list *****");
+            Console.WriteLine("Welocome to Stack & Queue Programs Using Linked list");
 
             Queue obj = new Queue();
             Console.WriteLine("After push the elements are : ");
@@ -19,18 +19,10 @@ namespace StackQueueUsingLinkedList
 
 
             Console.WriteLine("Top Element of the Queue is : " + obj.peek());
+            Console.WriteLine("Top Element of the Queue is : " + obj.peek());
 
-            //We can check other functios:
-
-
-            //Console.WriteLine();
-            //Console.WriteLine("size : " + obj.size());
-            //Console.WriteLine("peek : " + obj.peek());
-            //Console.WriteLine("dequeue : " + obj.dequeue());
-            //Console.WriteLine("size : " + obj.size());
-            //Console.WriteLine("peek : " + obj.peek());
-            //Console.WriteLine("isEmpty : " + obj.isEmpty());
-
+            //check other functios:
+            Console.WriteLine("Item popped from stack = " + obj.pop());
         }
     }
 }
