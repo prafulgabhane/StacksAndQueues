@@ -10,9 +10,10 @@ namespace StackQueueUsingLinkedList
     {
         public int data;
         public NewNode next;
-        public NewNode(int data)
+        public NewNode(int value)
         {
-            this.data = data;
+            this.data = value;
+            this.next = null;
         }
     }
 }
